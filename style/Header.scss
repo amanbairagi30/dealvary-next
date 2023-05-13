@@ -1,0 +1,245 @@
+@import 'Static';
+
+.header{
+  width: 100%;
+  height: 70px;
+//  border: 1px solid;
+  padding: 20px 0px;
+  font-family: $text2;
+  background-color: $color2;
+  display: flex;
+  justify-content: center;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    // margin: auto;
+    // border:1px solid red;
+    background-color: $color2;
+    align-items: center;
+
+    .logo{
+      img{
+          background-color: $color2;
+          width: 170px;
+        }
+          // border: 1px solid;
+    }
+
+// Serach Bar...............
+form{
+  transition: all 1s;
+  width: 400px;
+  height: 40px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-family: $text2;
+  border: 1px solid rgb(169, 155, 155);
+  align-items: center;
+  display: flex;
+  // padding: 5px;
+
+
+  // DropDown
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 25px;
+    // overflow: hidden;
+    width: 13rem;
+    // border: 1px solid;
+    background-color:transparent;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: $color3;
+    text-align: center;
+    font-family: $text2;
+    font-size: 0.9rem;
+    padding: 10px 10px;
+    font-weight: 100;
+    text-decoration: none;
+  }
+ 
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+
+  // button{
+  //   text-align: center;
+  //   font-family: $text2;
+  //   border-radius: 25px;
+  //   border: 1px solid rgb(169, 155, 155);
+  //   background-color: transparent;
+  //   margin-left: 10px;
+  //   cursor: pointer;
+  //   height: 30px;
+  //   width:90px;
+  // }
+  svg{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 55.5px;
+    font-family: $text1;
+    background-color: transparent;
+    height: 55.5px;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+      transition: all 0.3s;  
+      &:hover{
+        transform: scale(1.23);
+      }
+  }
+}
+
+input{
+  width: 100%;;
+  line-height: 20px;
+  outline: 0;
+  border: 0;
+  font-size: 0.9em;
+  font-weight: 100;
+  background-color: $color2;
+  border-radius: 20px;
+  font-family: $text2;
+  padding: 0 20px;
+}
+    .auth-button{
+      width:15rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: $color2;
+      border: 1px solid;
+
+      .user-img{
+        border-radius: 50%;
+        border: 2px solid red;
+        overflow: hidden;
+        width: 2.5rem;
+        height: 2.5rem;
+        // &:hover{}
+          &:hover{
+            .hover-profile{
+              opacity: 1;
+              transition-duration: 1s;
+            }
+          }
+
+        .hover-profile{
+          position: absolute;
+          border: 2px solid red;
+          display: flex;
+          opacity: 0;
+          margin: auto;
+          top: 10%;
+          right: 9.5%;
+          height: fit-content;
+          padding: 0.2rem 0.2rem;
+          width: 5rem;
+          border: 2px solid;
+          z-index: 1000;
+          background-color: white;
+          
+        }
+
+        img{
+          // width: 3rem;
+          width: 100%;
+          height: 100%;
+          // height: 3rem;
+          object-fit: cover;
+        }
+      }
+
+      .sell-btn{
+        background-color: transparent;
+        // border: 1px solid rgb(169, 155, 155);
+        stroke: none;
+        outline: none;
+        transition: all 0.4s;
+        // border: 1px solid $color1;
+        width: 10rem;
+        font-family: $text2;
+
+        &:hover{
+          background-color: $color1;
+          color: #fff;
+        }
+      }
+       button{
+        height: 40px;
+        width: 90px;
+        // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius:25px;
+        font-family: $text2;
+        font-weight: 500;
+        border: none;
+        letter-spacing: 2px;
+        cursor: pointer;
+         transition: all 0.4s;
+        &:hover{
+            letter-spacing: 1px;
+        }
+    }
+    .login{
+        background-color: transparent;
+        // border: 1px solid rgb(169, 155, 155);
+        stroke: none;
+        outline: none;
+        transition: all 0.4s;
+        &:hover{
+          background-color: $color3;
+          border: none;
+          color: #fff;
+        }
+    }
+    .sing{
+        background-color: $color3;
+        border: none;
+        stroke: none;
+        outline: none;
+        color: #fff;
+        &:hover{
+            background-color: $color3;
+            border: none;
+            // border: 1px solid rgb(169, 155, 155);
+            color: $color2;
+          }
+    }
+       
+    }
+}
+

@@ -1,0 +1,135 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: $color1;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+
+    .navbar-content {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            width: 180px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-first {
+            display: flex;
+            justify-content: space-between;
+            font-family: $text2;
+            list-style: none;
+            // border: 1px solid;
+
+
+            a {
+                text-decoration: none;
+                transition: all 0.2s;
+
+                span {
+                    color: $color2;
+                    font-weight: 500;
+                    list-style: none;
+                    opacity: 0.8;
+                }
+
+                &:hover {
+                    span {
+                        opacity: 1;
+                    }
+
+                    transform: scale(1.11);
+                }
+            }
+        }
+
+        .nav-second {
+            display: flex;
+            justify-content: space-between;
+            font-family: $text2;
+            list-style: none;
+            margin-right: 10px;
+            // border: 1px solid;
+            width: 380px;
+
+            a {
+                text-decoration: none;
+                transition: all 0.9s;
+
+                p{
+                    font-size: $textsize;
+                    color: $color2;
+                    font-weight: 500;
+                    list-style: none;
+                    opacity: 0.8;
+                    transition: all 0.8s;
+                    span{
+                        transition: all 0.8s;
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    p{
+                        opacity: 1;
+                         border-bottom: 1px solid $color2;
+
+                        span{
+                            display: inline-flex;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        .nav-third {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            p{
+                position: absolute;
+                background-color: #ffff;
+                border-radius: 50%;
+                width: 14px;
+                height: 14px;
+                font: 900 0.7rem $text2;
+                color: $color1;
+                display: grid;
+                place-items: center;
+                transform: translate(280%,-80%);
+            }
+            .heart-bg{
+                height: 30px;
+                width: 30px;
+                // background-color: $color2;
+                border-radius: 50%;
+                z-index: 0;
+                display: grid;
+                place-items: center;
+                transition: all 0.4s;
+                cursor: pointer;
+                svg{
+                    z-index: 16;
+                    color: $color2;
+                    font-size: $iconsize;
+                    transition: all 0.4s;
+                }
+
+                &:hover{
+                    background-color: #ffff;
+                    svg{
+                        color: $color1;
+                    }
+                }
+            }
+
+        }
+    }
+}
